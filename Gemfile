@@ -9,6 +9,7 @@ group :development, :test do
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
   gem 'haml'
+  gem 'bootstrap-sass', '2.0.4'
 end
 
 # Gems used only for assets and not required
