@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.8'
 gem 'bootstrap-sass', '2.0.4'
 gem 'haml'
-  gem 'sass-rails',   '3.2.5'
+gem 'sass-rails',   '3.2.5'
+gem 'bcrypt-ruby', '3.0.1'
   
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -11,7 +12,7 @@ group :development, :test do
   gem 'guard-rspec', '1.2.1'
   gem 'guard-spork', '1.2.0'
   gem 'spork', '0.9.2'
-
+  gem 'annotate', '2.5.0'
 
 end
 
