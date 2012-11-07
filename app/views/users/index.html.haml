@@ -1,0 +1,6 @@
+.row.user_index
+	.span6
+		- @users.each do |user|
+			= gravatar_for(user)
+			%h2= link_to user.name, user
+			%p= link_to user.email, "mailto:#{user.email}"
