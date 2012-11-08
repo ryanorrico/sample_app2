@@ -4,6 +4,7 @@
 
 $grayMediumLight: #eaeaea;
 $grayMediumLight: #eaeaea;
+$funGreen: #C7F464;
 
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
@@ -69,12 +70,14 @@ p {
 
 #logo {
   float: left;
+  color: $funGreen;
+   font-family: "hooligan";
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
   margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
+  font-size: 40px;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
+  padding:5px 0;
   font-weight: bold;
   line-height: 1;
   &:hover {
