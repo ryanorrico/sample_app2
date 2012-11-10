@@ -5,4 +5,15 @@
 			%h1	
 				= gravatar_for @user
 				= @user.name
+	.span8
+		- if @microposts
+			%h3= "Microposts: #{@microposts.count}"
+			%ol.microposts
+				- @microposts.each do |micropost|
+					%li
+						%span.content= micropost.content
+						%span.timestamp= "#{time_ago_in_words(micropost.created_at)} ago."
+
+			= will_paginate(@microposts)
+
 				

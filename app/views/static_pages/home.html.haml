@@ -1,8 +1,20 @@
 - provide(:title, 'Home')
-.hero-unit.center
-	%h1 Sample App
-	%h2 This is the Home page for the Sample App
 
-	=link_to "Sign Up Now!", signup_path, :class=>"btn btn-large btn-primary"
+- if signed_in?
+	.row
+		%aside.span4
+			%section
+				= render 'shared/user_info'
+			%section
+				= render 'shared/micropost_form'
+		.span8
+			%h3 Micropost feed
+			= render 'shared/feed'
+- else
+	.hero-unit.center
+		%h1 Sample App
+		%h2 This is the Home page for the Sample App
 
-=link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org'
+		=link_to "Sign Up Now!", signup_path, :class=>"btn btn-large btn-primary"
+
+	=link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org'
