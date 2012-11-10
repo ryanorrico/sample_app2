@@ -12,6 +12,8 @@ describe "StaticPages" do
 		it { should have_selector('title',
 								:text => 'Ruby on Rails Tutorial Sample App | Home') }
 
+
+
 		describe "for signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
       before do
@@ -21,6 +23,10 @@ describe "StaticPages" do
         visit root_path
       end
 
+      it "should display the micropost count" do
+      	page.should have_selector('span', content: user.microposts.count)
+      end
+      
       it "should render the user's feed" do
         user.feed.each do |item|
           page.should have_selector("li##{item.id}", text: item.content)
